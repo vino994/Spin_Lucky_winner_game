@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin-Lucky-Winner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="spin"></div>
+        <div class="winnerNum">
+            <div class="number" style="--i:1;--color:#FF3FA4">
+                <span>100</span>
+            </div>
+            <div class="number" style="--i:2;--color:#176B87">
+                <span>70</span>
+            </div>
+            <div class="number" style="--i:3;--color:#952323">
+                <span>50</span>
+            </div>
+            <div class="number" style="--i:4;--color:#FF6969">
+                <span>60</span>
+            </div>
+            <div class="number" style="--i:5;--color:#279EFF">
+                <span>90</span>
+            </div>
+            <div class="number" style="--i:6;--color:#512B81">
+                <span>10</span>
+            </div>
+            <div class="number" style="--i:7;--color:#8062D6">
+                <span>1
+                </span>
+            </div>
+            <div class="number" style="--i:8;--color:#7A9D54">
+                <span>6
+                </span>
+            </div>
+   
+        </div>
+    </div>
+    <script>
+
+        var winnerNum = document.querySelector('.winnerNum');
+        var spin = document.querySelector('.spin');
+     
+        spin.addEventListener('click',()=>{
+            console.log('hai')
+            var random = Math.ceil(Math.random()* 3600);
+            winnerNum.style.transform = 'rotate('+random+'deg)'
+        })
+    </script>
+</body>
+
+</html>
